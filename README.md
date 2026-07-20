@@ -1,35 +1,54 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# TravelWaka
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+TravelWaka is a modern **Kotlin Multiplatform (KMP)** mobile application designed to help travelers "find out where you want waka go". It offers a seamless experience across **Android** and **iOS** using a shared codebase for business logic and UI.
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## 📱 Screenshots
 
-### Build and Run Android Application
+| Splash Screen | Language Selection | Login Onboarding | Dashboard |
+| :---: | :---: | :---: | :---: |
+| ![Splash Screen](screenshots/splash_screen.png) | ![Language Selection](screenshots/language_selection.png) | ![Login Onboarding](screenshots/login_onboarding.png) | ![Dashboard](screenshots/dashboard.png) |
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
+## ✨ Features
+
+- **Multi-language Support:** Choose from English, Yoruba, Hausa, and Pidgin.
+- **Onboarding Experience:** Smooth transition from splash to language selection and login.
+- **Authentication:** Integrated sign-in and sign-up flows (Work in Progress).
+- **Dashboard:** A central hub for exploring travel destinations.
+- **Local Persistence:** Powered by Room for offline-first capabilities.
+- **Dependency Injection:** Modular and testable architecture using Koin.
+
+## 🚀 Tech Stack
+
+- **UI Framework:** [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
+- **Networking:** [Ktor](https://ktor.io/)
+- **Dependency Injection:** [Koin](https://insert-koin.io/)
+- **Local Database:** [Room](https://developer.android.com/training/data-storage/room)
+- **Image Loading:** [Coil 3](https://coil-kt.github.io/coil/)
+- **Navigation:** [Navigation 3](https://developer.android.com/guide/navigation/navigation-3)
+- **Logging:** [Napier](https://github.com/AAkira/Napier)
+- **Permissions:** [MOKO Permissions](https://github.com/icerockdev/moko-permissions)
+
+## 📁 Project Structure
+
+- `composeApp/`: Shared Kotlin Multiplatform module.
+  - `commonMain/`: Shared logic and UI (Compose).
+  - `androidMain/`: Android-specific implementations.
+  - `iosMain/`: iOS-specific implementations.
+- `iosApp/`: iOS entry point and SwiftUI wrapper.
+
+## 🛠️ Build and Run
+
+### Android
+- Open in Android Studio and run the `composeApp` configuration.
+- From terminal:
+  ```bash
   ./gradlew :composeApp:assembleDebug
   ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
 
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+### iOS
+- Open the `iosApp` directory in Xcode or run from Android Studio if configured.
+- Ensure you have a Mac with Xcode installed.
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+*TravelWaka - Find out where you want waka go.*

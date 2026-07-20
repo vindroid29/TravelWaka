@@ -1,23 +1,23 @@
-# Implementation Plan - Generate README.md
+# Implementation Plan - Platform-Specific README Enhancement
 
-This plan outlines the creation of a comprehensive `README.md` for the TravelWaka project, replacing the existing template with detailed information about the project's purpose, features, tech stack, and structure.
+The goal is to restructure the `README.md` to provide more detailed, platform-specific information for both Android and iOS, highlighting their unique entry points, setup requirements, and components.
 
 ## Proposed Changes
 
 ### Documentation
 
 #### [MODIFY] [README.md](file:///Users/vinaykumbhar/AndroidStudioProjects/TravelWaka/README.md)
-Update the root `README.md` to include:
-- Project overview (TravelWaka - KMP Mobile App).
-- Key features (Onboarding, Authentication, Dashboard).
-- Detailed Tech Stack (Compose Multiplatform, Ktor, Room, Koin, etc.).
-- Project structure explanation.
-- Build and run instructions for Android and iOS.
-- Visuals (placeholders for screenshots if needed).
+Update the root `README.md` to:
+- Split the **Build and Run** section into distinct, detailed blocks for Android and iOS.
+- Add a **Platform-Specific Details** section highlighting:
+    - **Android:** Entry points (`MyApplication`, `MainActivity`), DI setup (`androidContext`), and Room setup.
+    - **iOS:** Entry point (`MainViewController`), SwiftUI integration (`iosApp`), and iOS-specific logging.
+- Categorize screenshots by platform if applicable (adding placeholders for iOS if not available).
+- Update the **Project Structure** section to explicitly link to `androidMain` and `iosMain` descriptions.
 
 ## Verification Plan
 
 ### Manual Verification
-- Verify that all links in the `README.md` are correct.
-- Ensure the documentation accurately reflects the current state of the codebase.
-- Review the formatting for readability and professional appearance.
+- Review the new `README.md` to ensure clear distinction between platforms.
+- Verify all links to platform-specific files are correct.
+- Ensure build commands for both platforms are accurate.

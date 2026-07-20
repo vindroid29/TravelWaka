@@ -1,0 +1,13 @@
+- [x] Create `screenshots` directory in project root.
+- [x] Deploy app to emulator and capture key screens:
+    - [x] Splash Screen
+    - [x] Language Selection
+    - [x] Login Onboarding
+    - [x] Dashboard
+- [x] Generate comprehensive `README.md` with:
+    - [x] Project overview and tagline.
+    - [x] Screenshots table.
+    - [x] Features list.
+    - [x] Tech stack details.
+    - [x] Build instructions.
+- [x] Verify links and formatting.
