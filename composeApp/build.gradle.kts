@@ -77,11 +77,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.globant.travelwaka"
+    namespace = "com.vindroid.travelwaka"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.globant.travelwaka"
+        applicationId = "com.vindroid.travelwaka"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
